@@ -1,0 +1,293 @@
+/* Variáveis de Cores */
+:root {
+  --bg-color: #f8f9fa;
+  --sidebar-bg: #ffffff;
+  --main-text-color: #343a40;
+  --secondary-text-color: #6c757d;
+  --accent-color: #17a2b8; /* Teal */
+  --accent-color-hover: #138496;
+  --card-bg: #ffffff;
+  --card-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  --card-shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.1);
+  --border-color: #e9ecef;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --sidebar-bg: #1e1e1e;
+  --main-text-color: #e0e0e0;
+  --secondary-text-color: #a0a0a0;
+  --accent-color: #4dd0e1; /* Light Teal */
+  --accent-color-hover: #80deea;
+  --card-bg: #1e1e1e;
+  --card-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  --card-shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.35);
+  --border-color: #333;
+}
+
+/* Estilos gerais */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--main-text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+}
+
+/* Layout Principal */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar {
+  background-color: var(--sidebar-bg);
+  padding: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+  position: relative;
+}
+
+.sidebar-content h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  margin: 1rem 0 0.25rem;
+}
+
+.subtitle {
+  color: var(--secondary-text-color);
+  font-size: 0.9rem;
+  max-width: 400px;
+  margin: 0 auto 1.5rem;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.sidebar-nav a {
+  color: var(--secondary-text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.sidebar-nav a:hover {
+  color: var(--accent-color);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--secondary-text-color);
+  transition: color 0.2s;
+}
+
+.contact-links a:hover {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+.main-content {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+section {
+  border-bottom: 1px solid var(--border-color);
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+/* Projetos */
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.projeto {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.projeto img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.projeto h3 {
+  font-family: 'Poppins', sans-serif;
+  margin: 1rem 1.5rem 0.5rem;
+}
+
+.projeto p {
+  margin: 0 1.5rem 1.5rem;
+  color: var(--secondary-text-color);
+}
+
+.projeto:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* Timeline para Experiência e Formação */
+.timeline {
+  position: relative;
+  padding-left: 2.5rem; /* Aumenta o espaço para o conteúdo */
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* O Ponto Azul */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: calc(-2.5rem + 1.25rem - 6px); /* Posiciona o ponto no meio do padding */
+  top: 0.5rem; /* Alinha verticalmente com o texto */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--accent-color); /* Transforma em um ponto sólido */
+  z-index: 1;
+}
+
+/* A Linha de Conexão (apenas na Experiência) */
+#experiencia .timeline-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: calc(-2.5rem + 1.25rem - 1px); /* Alinha com o centro do ponto */
+  top: calc(0.5rem + 12px); /* Começa logo abaixo do ponto */
+  height: calc(100% + 2.5rem - 11px); /* Estica a linha para conectar perfeitamente ao próximo ponto */
+  width: 2px;
+  background-color: var(--border-color);
+}
+
+.timeline-item h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  margin: 0 0 0.25rem;
+}
+
+.timeline-item p {
+  margin: 0;
+  color: var(--secondary-text-color);
+}
+
+/* Remove a linha da timeline apenas na seção de Formação */
+#formacao .timeline {
+  padding-left: 2.5rem; /* Mantém o mesmo recuo da experiência */
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--secondary-text-color);
+  font-size: 0.9rem;
+}
+
+/* Botão de Tema */
+#theme-toggle {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: transparent;
+  color: var(--secondary-text-color);
+  border: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: color 0.2s, transform 0.3s;
+}
+
+#theme-toggle:hover {
+  color: var(--accent-color);
+  transform: rotate(15deg);
+}
+
+/* Media Queries para Responsividade */
+@media (min-width: 992px) {
+  .page-wrapper {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 320px;
+    border-right: 1px solid var(--border-color);
+    border-bottom: none;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 2.5rem; /* Reduz o espaço no topo para subir o conteúdo */
+    text-align: left;
+  }
+
+  .sidebar-content {
+    width: 100%;
+    padding: 0 2rem; /* Remove padding vertical para controle preciso */
+  }
+
+  .sidebar-nav ul, .contact-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .main-content .container:first-of-type {
+    padding-top: 5.5rem; /* Alinha o h2 com o h1 */
+  }
+
+  .main-content {
+    margin-left: 320px;
+    padding: 0;
+  }
+
+  .container {
+    padding: 4rem 2rem;
+  }
+}
