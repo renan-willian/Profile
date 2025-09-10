@@ -50,7 +50,7 @@ h2 {
 
 .sidebar {
   background-color: var(--sidebar-bg);
-  padding: 2rem;
+  padding: 2rem 1rem; /* Reduz o padding lateral em telas pequenas */
   border-bottom: 1px solid var(--border-color);
   text-align: center;
   position: relative;
@@ -102,6 +102,7 @@ h2 {
   align-items: center;
   gap: 0.75rem;
   color: var(--secondary-text-color);
+  word-break: break-word; /* Garante que o texto quebre e não transborde */
   transition: color 0.2s;
 }
 
@@ -284,6 +285,10 @@ footer {
     align-items: flex-start;
     padding-top: 2.5rem; /* Reduz o espaço no topo para subir o conteúdo */
     text-align: left;
+  }
+
+  .sidebar {
+    padding: 2.5rem 2rem; /* Restaura o padding original no desktop */
   }
 
   .sidebar-content {
