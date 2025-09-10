@@ -64,6 +64,7 @@ h2 {
 
 .subtitle {
   color: var(--secondary-text-color);
+  text-align: center; /* Garante o alinhamento no mobile */
   font-size: 0.9rem;
   max-width: 400px;
   margin: 0 auto 1.5rem;
@@ -92,8 +93,8 @@ h2 {
 
 .contact-links {
   display: flex;
-  flex-wrap: wrap; /* Permite que os links quebrem a linha */
-  justify-content: center;
+  flex-direction: column; /* Coloca os links um abaixo do outro */
+  align-items: center; /* Centraliza os links */
   gap: 1rem;
 }
 
@@ -300,6 +301,10 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+  }
+
+  .subtitle {
+    text-align: left; /* Alinha à esquerda no desktop */
   }
 
   .main-content .container:first-of-type {
