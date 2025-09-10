@@ -33,6 +33,7 @@ body {
   background-color: var(--bg-color);
   color: var(--main-text-color);
   transition: background-color 0.3s, color 0.3s;
+  overflow-x: hidden; /* Previne rolagem horizontal */
 }
 
 h2 {
@@ -46,11 +47,12 @@ h2 {
 .page-wrapper {
   display: flex;
   flex-direction: column;
+  overflow-x: hidden; /* Previne rolagem horizontal */
 }
 
 .sidebar {
   background-color: var(--sidebar-bg);
-  padding: 2rem 1rem; /* Reduz o padding lateral em telas pequenas */
+  padding: 5rem 1rem 2rem; /* Adiciona espaço no topo para o botão de tema */
   border-bottom: 1px solid var(--border-color);
   text-align: center;
   position: relative;
@@ -236,24 +238,19 @@ footer {
   position: fixed; /* Fixo na tela, independente da rolagem */
   top: 1.5rem;
   right: 1.5rem;
-  background: var(--card-bg);
-  color: var(--main-text-color);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  width: 42px;
-  height: 42px;
+  background: transparent;
+  color: var(--secondary-text-color);
+  border: none;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
   font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.2s, transform 0.3s, background-color 0.3s;
+  transition: color 0.2s;
   z-index: 1000; /* Garante que o botão fique acima de outros elementos */
 }
 
 #theme-toggle:hover {
   color: var(--accent-color);
-  transform: rotate(15deg);
 }
 
 /* Media Queries para Responsividade */
@@ -284,12 +281,8 @@ footer {
     border-bottom: none;
     display: flex;
     align-items: flex-start;
-    padding-top: 2.5rem; /* Reduz o espaço no topo para subir o conteúdo */
-    text-align: left;
-  }
-
-  .sidebar {
     padding: 2.5rem 2rem; /* Restaura o padding original no desktop */
+    text-align: left;
   }
 
   .sidebar-content {
