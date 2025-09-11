@@ -119,6 +119,14 @@ h2 {
   color: var(--accent-color);
 }
 
+/* Item de contato não clicável (Localização) */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--secondary-text-color);
+}
+
 .main-content {
   width: 100%;
 }
