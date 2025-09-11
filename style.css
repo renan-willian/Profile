@@ -57,7 +57,7 @@ h2 {
 
 .sidebar {
   background-color: var(--sidebar-bg);
-  padding: 5rem 1rem 2rem; /* Adiciona espaço no topo para o botão de tema */
+  padding: 4rem 1rem 2rem; /* Diminui o espaço no topo na visualização mobile */
   border-bottom: 1px solid var(--border-color);
   text-align: center;
   position: relative;
