@@ -57,7 +57,7 @@ h2 {
 
 .sidebar {
   background-color: var(--sidebar-bg);
-  padding: 3.5rem 1rem 2rem; /* Diminui mais um pouco o espaço no topo */
+  padding: 3rem 1rem 2rem; /* Ajuste final no espaço do topo */
   border-bottom: 1px solid var(--border-color);
   text-align: center;
   position: relative;
