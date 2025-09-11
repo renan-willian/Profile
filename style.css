@@ -145,6 +145,11 @@ section:last-of-type {
   border-bottom: none;
 }
 
+/* Justifica o texto da seção "Sobre" */
+#sobre p {
+  text-align: justify;
+}
+
 /* Projetos */
 .projetos-grid {
   display: grid;
