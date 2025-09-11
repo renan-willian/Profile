@@ -57,7 +57,7 @@ h2 {
 
 .sidebar {
   background-color: var(--sidebar-bg);
-  padding: 4rem 1rem 2rem; /* Diminui o espaço no topo na visualização mobile */
+  padding: 3.5rem 1rem 2rem; /* Diminui mais um pouco o espaço no topo */
   border-bottom: 1px solid var(--border-color);
   text-align: center;
   position: relative;
