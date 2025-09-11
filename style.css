@@ -298,7 +298,7 @@ footer {
     border-bottom: none;
     display: flex;
     align-items: flex-start;
-    padding: 2.5rem 2rem; /* Restaura o padding original no desktop */
+    padding: 0.5rem 2rem; /* Sobe mais um pouquinho */
     text-align: left;
   }
 
@@ -318,7 +318,7 @@ footer {
   }
 
   .main-content .container:first-of-type {
-    padding-top: 5.5rem; /* Alinha o h2 com o h1 */
+    padding-top: 3.5rem; /* Re-alinha o h2 com o h1 */
   }
 
   .main-content {
